@@ -2658,6 +2658,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   loadRoot("sprites/");
   loadAseprite("mario", "Mario.png", "Mario.json");
   loadAseprite("enemies", "enemies.png", "enemies.json");
+  loadSprite("bowser_standing", "bowser_standing.jpg");
   loadSprite("ground", "ground.png");
   loadSprite("questionBox", "questionBox.png");
   loadSprite("emptyBox", "emptyBox.png");
@@ -2833,7 +2834,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       "badGuy"
     ],
     "B": () => [
-      sprite("bowser_standing", { anim: "Walking" }),
+      sprite("bowser_standing"),
       area({ width: 16, height: 16 }),
       solid(),
       body(),

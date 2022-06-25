@@ -11,6 +11,7 @@ kaboom({
 loadRoot("sprites/");
 loadAseprite("mario", "Mario.png", "Mario.json");
 loadAseprite("enemies", "enemies.png", "enemies.json");
+loadSprite("bowser_standing", "bowser_standing.jpg");
 loadSprite("ground", "ground.png");
 loadSprite("questionBox", "questionBox.png");
 loadSprite("emptyBox", "emptyBox.png");
@@ -194,7 +195,7 @@ const levelConf = {
     "badGuy"
   ],
   "B": () => [
-    sprite("bowser_standing", { anim: 'Walking' }),
+    sprite("bowser_standing"),
     area({ width: 16, height: 16 }),
     solid(),
     body(),
