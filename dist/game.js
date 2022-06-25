@@ -2684,7 +2684,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       "                     -?-                            |                                        ",
       "                                                    |                                        ",
       "       _                                            |                                        ",
-      "       |                                            |          E    E            H           ",
+      "   B  |                               M            |          E    E            H           ",
       "================   ==========================================================================",
       "================   =========================================================================="
     ],
@@ -2824,6 +2824,16 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     ],
     "E": () => [
       sprite("enemies", { anim: "Walking" }),
+      area({ width: 16, height: 16 }),
+      solid(),
+      body(),
+      patrol(50),
+      enemy(),
+      origin("bot"),
+      "badGuy"
+    ],
+    "B": () => [
+      sprite("bowser_standing", { anim: "Walking" }),
       area({ width: 16, height: 16 }),
       solid(),
       body(),
